@@ -82,6 +82,51 @@
 
         </div>
 
+        <!-- Registration form -->
+        <div class="row my-5">
+            <div class="col-12 col-md-8 col-lg-6 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="h5 mb-3">Register</h3>
+                        <form id="registerForm" novalidate>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+
+                            <div class="mb-3 row">
+                                <div class="col">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" required minlength="6">
+                                    <div class="invalid-feedback">Please enter a password (min 6 characters).</div>
+                                </div>
+                                <div class="col">
+                                    <label for="confirmPassword" class="form-label">Confirm</label>
+                                    <input type="password" class="form-control" id="confirmPassword" required>
+                                    <div class="invalid-feedback">Passwords must match.</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="agree" required>
+                                <label class="form-check-label" for="agree">I agree to the terms</label>
+                                <div class="invalid-feedback">You must agree before registering.</div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row my-5">
             <div class="col-12">
                 <div class="card">
@@ -119,6 +164,39 @@
                 }
             }
         });
+    </script>
+
+    <script>
+        (function () {
+            const form = document.getElementById('registerForm');
+            if (!form) return;
+            const pwd = document.getElementById('password');
+            const confirm = document.getElementById('confirmPassword');
+
+            form.addEventListener('submit', function (e) {
+                confirm.classList.remove('is-invalid');
+
+                if (pwd.value !== confirm.value) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    confirm.classList.add('is-invalid');
+                    form.classList.add('was-validated');
+                    return;
+                }
+
+                if (!form.checkValidity()) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    form.classList.add('was-validated');
+                    return;
+                }
+
+                e.preventDefault();
+                alert('Registered: ' + document.getElementById('email').value);
+                form.reset();
+                form.classList.remove('was-validated');
+            }, false);
+        })();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
