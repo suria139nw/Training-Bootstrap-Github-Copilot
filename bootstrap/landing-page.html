@@ -34,7 +34,8 @@
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                         <button class="btn btn-outline-success" type="submit">Search</button>
-                        <button id="themeToggle" class="btn btn-outline-secondary ms-2" type="button" aria-label="Toggle theme">
+                        <button id="themeToggle" class="btn btn-outline-secondary ms-2" type="button"
+                            aria-label="Toggle theme">
                             <span id="themeIcon">🌙</span>
                         </button>
                     </form>
@@ -62,30 +63,37 @@
                                 <div class="carousel-inner h-100">
                                     <div class="carousel-item active h-100">
                                         <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
-                                            class="d-block w-100 h-100 object-fit-cover rounded-3" alt="HTML & CSS course">
+                                            class="d-block w-100 h-100 object-fit-cover rounded-3"
+                                            alt="HTML & CSS course">
                                     </div>
                                     <div class="carousel-item h-100">
                                         <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                                            class="d-block w-100 h-100 object-fit-cover rounded-3" alt="JavaScript course">
+                                            class="d-block w-100 h-100 object-fit-cover rounded-3"
+                                            alt="JavaScript course">
                                     </div>
                                     <div class="carousel-item h-100">
                                         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
-                                            class="d-block w-100 h-100 object-fit-cover rounded-3" alt="Bootstrap course">
+                                            class="d-block w-100 h-100 object-fit-cover rounded-3"
+                                            alt="Bootstrap course">
                                     </div>
                                     <div class="carousel-item h-100">
                                         <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80"
-                                            class="d-block w-100 h-100 object-fit-cover rounded-3" alt="Deployment course">
+                                            class="d-block w-100 h-100 object-fit-cover rounded-3"
+                                            alt="Deployment course">
                                     </div>
                                     <div class="carousel-item h-100">
                                         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80&ixlib=rb-4.0.3"
-                                            class="d-block w-100 h-100 object-fit-cover rounded-3" alt="Additional course">
+                                            class="d-block w-100 h-100 object-fit-cover rounded-3"
+                                            alt="Additional course">
                                     </div>
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+                                    data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+                                    data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
@@ -96,48 +104,138 @@
             </div>
         </header>
 
+        <section id="features" class="py-5">
+            <div class="container">
+                <h2 class="mb-4 text-center">ฟีเจอร์เด่น</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="feature-card p-4 text-center h-100">
+                            <div class="feature-icon mb-3">🎯</div>
+                            <h5 class="mb-2">ฝึกทำจริง</h5>
+                            <p class="mb-0">แบบฝึกหัดและโปรเจกต์เพื่อใช้งานได้จริง</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card p-4 text-center h-100">
+                            <div class="feature-icon mb-3">💡</div>
+                            <h5 class="mb-2">แนวทางออกแบบ</h5>
+                            <p class="mb-0">เทคนิคการออกแบบด้วย Bootstrap และระบบกริด</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card p-4 text-center h-100">
+                            <div class="feature-icon mb-3">⚡</div>
+                            <h5 class="mb-2">เร็วและพร้อมใช้งาน</h5>
+                            <p class="mb-0">แนะนำการปรับจูน performance และการ deploy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lessons" class="py-5">
+            <div class="container">
+                <h2 class="mb-4 text-center">ตารางรายละเอียดแต่ละบทเรียน</h2>
+                <div class="table-responsive shadow-sm rounded">
+                    <table class="table table-striped table-hover align-middle mb-0 lessons-table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">บทเรียน</th>
+                                <th scope="col">เวลา</th>
+                                <th scope="col">ระดับ</th>
+                                <th scope="col">ราคา</th>
+                                <th scope="col">คำอธิบาย</th>
+                                <th scope="col" class="text-end">ลงทะเบียน</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>HTML &amp; CSS Basics</td>
+                                <td>3 ชม.</td>
+                                <td>เริ่มต้น</td>
+                                <td>Free</td>
+                                <td>พื้นฐาน HTML, การจัดวาง และ responsive layout</td>
+                                <td class="text-end"><a class="btn btn-sm btn-outline-primary" href="#">ลงทะเบียน</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>JavaScript Fundamentals</td>
+                                <td>4 ชม.</td>
+                                <td>กลาง</td>
+                                <td>$29</td>
+                                <td>ตัวแปร, ฟังก์ชัน, และ DOM</td>
+                                <td class="text-end"><a class="btn btn-sm btn-outline-primary" href="#">ลงทะเบียน</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bootstrap 5 Design</td>
+                                <td>3.5 ชม.</td>
+                                <td>กลาง</td>
+                                <td>$39</td>
+                                <td>Components, utilities และระบบกริดเชิงลึก</td>
+                                <td class="text-end"><a class="btn btn-sm btn-outline-primary" href="#">ลงทะเบียน</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Deploy &amp; Optimize</td>
+                                <td>2 ชม.</td>
+                                <td>กลาง-สูง</td>
+                                <td>$19</td>
+                                <td>ปรับแต่งประสิทธิภาพและการปล่อยใช้งาน</td>
+                                <td class="text-end"><a class="btn btn-sm btn-outline-primary" href="#">ลงทะเบียน</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
 
         <div class="row">
             <div class="col-12 col-md-6 col-lg-3">
-                <div class="card mt-3">
+                <div class="card mt-3 h-100">
                     <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
                         class="card-img-top" alt="HTML and CSS course image">
                     <div class="card-body">
                         <h5 class="card-title">HTML &amp; CSS Basics</h5>
-                        <p class="card-text">เรียนรู้พื้นฐาน HTML, CSS และการสร้าง layout responsive สำหรับเว็บไซต์แรกของคุณ</p>
+                        <p class="card-text">เรียนรู้พื้นฐาน HTML, CSS และการสร้าง layout responsive
+                            สำหรับเว็บไซต์แรกของคุณ</p>
                         <a href="#" class="btn btn-primary">ดูรายละเอียด</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
-                <div class="card mt-3">
+                <div class="card mt-3 h-100">
                     <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
                         class="card-img-top" alt="JavaScript course image">
                     <div class="card-body">
                         <h5 class="card-title">JavaScript Fundamentals</h5>
-                        <p class="card-text">เข้าใจตัวแปร ฟังก์ชัน และ DOM เพื่อพัฒนาเว็บที่โต้ตอบได้ เพิ่มประสบการณ์ให้ผู้ใช้</p>
+                        <p class="card-text">เข้าใจตัวแปร ฟังก์ชัน และ DOM เพื่อพัฒนาเว็บที่โต้ตอบได้</p>
                         <a href="#" class="btn btn-primary">ดูรายละเอียด</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
-                <div class="card mt-3">
+                <div class="card mt-3 h-100">
                     <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
                         class="card-img-top" alt="Bootstrap course image">
                     <div class="card-body">
                         <h5 class="card-title">Bootstrap 5 Design</h5>
-                        <p class="card-text">ออกแบบ UI สวยด้วย Bootstrap components และ grid system เพื่อหน้าเว็บที่ดูมืออาชีพ</p>
+                        <p class="card-text">ออกแบบ UI สวยด้วย Bootstrap components และ grid system
+                            เพื่อหน้าเว็บที่ดูมืออาชีพ</p>
                         <a href="#" class="btn btn-primary">ดูรายละเอียด</a>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
-                <div class="card mt-3">
+                <div class="card mt-3 h-100">
                     <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
                         class="card-img-top" alt="Deployment course image">
                     <div class="card-body">
                         <h5 class="card-title">Deploy &amp; Optimize</h5>
-                        <p class="card-text">เผยแพร่เว็บไซต์, ปรับความเร็ว และทำ SEO เบื้องต้น เพื่อให้คอร์สออนไลน์ของคุณพร้อมใช้งาน</p>
+                        <p class="card-text">เผยแพร่เว็บไซต์, ปรับความเร็ว และทำ SEO เบื้องต้น
+                            เพื่อให้คอร์สออนไลน์ของคุณพร้อมใช้งาน</p>
                         <a href="#" class="btn btn-primary">ดูรายละเอียด</a>
                     </div>
                 </div>
@@ -152,19 +250,19 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script>
-        (function(){
+        (function () {
             const toggle = document.getElementById('themeToggle');
             const icon = document.getElementById('themeIcon');
-            function setTheme(theme){
+            function setTheme(theme) {
                 document.body.setAttribute('data-theme', theme);
-                try{ localStorage.setItem('theme', theme); }catch(e){}
+                try { localStorage.setItem('theme', theme); } catch (e) { }
                 icon.textContent = theme === 'dark' ? '☀️' : '🌙';
             }
-            const saved = (function(){
-                try{ return localStorage.getItem('theme'); }catch(e){ return null; }
+            const saved = (function () {
+                try { return localStorage.getItem('theme'); } catch (e) { return null; }
             })() || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             setTheme(saved);
-            toggle.addEventListener('click', ()=> setTheme(document.body.getAttribute('data-theme')==='dark' ? 'light' : 'dark'));
+            toggle.addEventListener('click', () => setTheme(document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
         })();
     </script>
 </body>

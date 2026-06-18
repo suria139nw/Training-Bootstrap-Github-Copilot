@@ -1,7 +1,9 @@
 :root{
-    --blue:#0b5ed7;
-    --navy:#05204a;
-    --gold:#D4AF37;
+    --blue:#0d6efd;
+    --navy:#05205a;
+    --gold:#ffb703;
+    --accent-start:#0d6efd;
+    --accent-end:#ffb703;
     --white:#ffffff;
     --muted:#f6f9fc;
 }
@@ -83,8 +85,19 @@ header.header-hero .container{ max-width:1100px; }
 }
 
 [data-theme="dark"] body{
+    /* legacy/alternate selector — keep for descendants when body has data-theme */
+}
+
+/* Apply dark-mode styles directly to the body element when it has the attribute */
+body[data-theme="dark"]{
     background-color: var(--muted);
     color: var(--text);
+}
+
+/* Ensure explicit light-mode defaults when body is `light` or has no theme attribute */
+body[data-theme="light"], body:not([data-theme]){
+    background-color: var(--muted);
+    color: var(--navy);
 }
 
 [data-theme="dark"] .navbar{
@@ -117,7 +130,41 @@ header.header-hero .container{ max-width:1100px; }
 [data-theme="dark"] .card .card-text{ color: rgba(230,238,249,0.9); }
 [data-theme="dark"] .lead{ color: rgba(230,238,249,0.85); }
 [data-theme="dark"] .display-5{ color: var(--text); }
-[data-theme="dark"] h1,h2,h3,h4,h5,p, .navbar .nav-link, .dropdown-item{ color: rgba(230,238,249,0.92); }
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] p, [data-theme="dark"] .navbar .nav-link, [data-theme="dark"] .dropdown-item{ color: rgba(230,238,249,0.92); }
 
 /* Toggle button */
 #themeToggle{ border-radius:8px; }
+
+/* Features cards */
+.feature-card{
+    background: linear-gradient(135deg,var(--accent-start),var(--accent-end));
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+}
+.feature-icon{ font-size: 2.2rem; color: rgba(255,255,255,0.95); }
+
+/* Lessons table */
+.lessons-table thead th{ border-bottom: 0; background: linear-gradient(90deg,var(--accent-start),var(--accent-end)); color: var(--white); }
+.lessons-table tbody tr:hover{ transform: translateY(-4px); box-shadow: 0 12px 30px rgba(2,6,23,0.06); }
+.lessons-table td, .lessons-table th{ vertical-align: middle; }
+
+/* Dark mode tweaks for new components */
+[data-theme="dark"] .feature-card{
+    background: linear-gradient(135deg,var(--accent-start),var(--accent-end));
+}
+[data-theme="dark"] .lessons-table thead{ background: linear-gradient(90deg,var(--accent-start),var(--accent-end)); color: rgba(11,18,32,0.9); }
+
+/* Button hover/active accents */
+.btn-outline-primary:hover, .btn-outline-primary:focus{
+    background: var(--accent-start);
+    color: var(--white);
+    border-color: var(--accent-start);
+}
+
+/* Make card titles pop */
+.card .card-title{ color: var(--accent-start); }
+
